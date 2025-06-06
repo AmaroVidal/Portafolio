@@ -1,10 +1,6 @@
 body {
-  background: linear-gradient(
-    to right,
-    #0f2027,
-    #203a43,
-    #2c5364
-  ); /* fondo tipo galaxia */
+  height: 100%;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
   font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
@@ -27,7 +23,7 @@ body {
   bottom: 0;
   height: 3px;
   width: 0%;
-  background-color: #0d6efd; /* azul Bootstrap */
+  background-color: #0d6efd;
   transition: width 0.3s ease-in-out;
 }
 
@@ -89,9 +85,32 @@ body {
 
 .sobre-mi {
   color: white;
-  max-width: 850px;
   margin: 0 auto;
-  padding: 2rem;
+  max-width: 800px;
+}
+
+.sobre-mi h4 {
+  margin-bottom: 1rem;
+}
+.sobre-mi h6 {
+  margin-bottom: 1rem;
+}
+
+/* Adaptar para tablets y móviles */
+@media (max-width: 990px) {
+  .sobre-mi {
+    max-width: 660px;
+  }
+}
+@media (max-width: 776px) {
+  .sobre-mi {
+    max-width: 500px;
+  }
+}
+@media (max-width: 454px) {
+  .tech-category ul li {
+    padding: 0 !important;
+  }
 }
 
 .tech-list {
@@ -99,21 +118,22 @@ body {
   flex-direction: column;
   gap: 0rem;
 }
-
-.tech-category {
-  flex: 1;
-}
-
 .tech-category ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  gap: 1rem;
 }
 
 .tech-category ul li {
-  padding: 1rem 2rem 1rem 0rem;
   display: flex;
+  align-items: center;
+  width: calc(33.333% - 1rem);
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 .tech-category ul li p {
-  padding: 0rem 0.5rem 0rem 0.5rem;
+  margin: 1em;
 }
