@@ -7,6 +7,19 @@ body {
   display: flex;
   flex-direction: column;
 }
+h1.fw-bold {
+  animation: fadeInUp 1.2s ease;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .nav-link {
   font-size: 1.2rem;
