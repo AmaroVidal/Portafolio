@@ -232,17 +232,21 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    // Obtener la ruta actual del archivo
-    const currentPage = window.location.pathname.split("/").pop();
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+      const links = document.querySelectorAll(".nav-link");
 
-    // Seleccionar todos los enlaces del menú
-    const links = document.querySelectorAll(".nav-link");
-
-    links.forEach((link) => {
-      // Comparar href con el nombre del archivo actual
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
+      links.forEach((link) => {
+        const linkHref = link.getAttribute("href");
+        if (
+          linkHref === currentPage ||
+          (currentPage === "index.html" &&
+            (linkHref === "index.html" || linkHref === "./"))
+        ) {
+          link.classList.add("active");
+        }
+      });
     });
   </script>
 </html>
