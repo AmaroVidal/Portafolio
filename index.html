@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Portafolio by Amaro</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+      <div class="container-fluid justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="proyectos.html"
+              >Proyectos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+<div class="container flex-column flex-md-row text-white mt-5">
+  <div
+    class="presentation-container container d-flex justify-content-center align-items-center flex-column flex-md-row text-white mt-5"
+  >
+    <div class="info-card text-center text-md-start mb-4 mb-md-0">
+      <h1 class="fw-bold">Amaro Vidal Keller</h1>
+      <h4 class="text-info">Ingeniero en Informática</h4>
+      <p class="mt-3">
+        Soy un Ingeniero de Software con un enfoque integral en desarrollo
+        Full-stack. Cuento con una trayectoria en la construcción de soluciones
+        de software robustas, abarcando tanto el frontend como el backend
+      </p>
+    </div>
+    <div class="image-wrapper ms-md-5">
+      <div class="image-border">
+        <img
+          src="img/Amaro.png"
+          alt="Amaro"
+          class="profile-img"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="sobre-mi container justify-content-center mt-5">
+    <h3 class="seccion-titulo">Sobre mí</h3>
+    <h5 class="seccion-subtitulo">
+      Estas son algunas de las tecnologías con las que he estado trabajando:
+    </h5>
+
+    <div class="tech-list">
+      <div class="tech-category">
+        <h5>Bases de Datos</h5>
+        <ul>
+          <li><span class="material-symbols-outlined">database</span></i><p>Oracle</p></li>
+          <li><span class="material-symbols-outlined">database</span></i><p>MySQL</p></li>
+          <li><span class="material-symbols-outlined">database</span></i><p>PostgreSQL</p></li>
+        </ul>
+      </div>
+
+      <div class="tech-category">
+        <h4>Lenguajes</h4>
+        <ul>
+          <li><i class="mdi mdi-language-python mdi-24px"></i><p style="padding-top:0.3rem ;">Python</p></li>
+          <li><i class="mdi mdi-language-java mdi-24px"></i></i><p style="padding-top:0.3rem ;">Java</p></li>
+          <li><i class="fa-brands fa-angular" style="padding-top: 0.7rem;"></i><p style="padding-top: 0.4rem;">Angular</p></li>
+          <li><i class="fa-brands fa-react" style="padding-top: 0.7rem;"></i><p style="padding-top: 0.4rem;">React</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+  ></script>
+  <script>// Obtener la ruta actual del archivo
+const currentPage = window.location.pathname.split("/").pop();
+
+// Seleccionar todos los enlaces del menú
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach((link) => {
+  // Comparar href con el nombre del archivo actual
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});</script>
+</html>
